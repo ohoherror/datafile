@@ -2,6 +2,7 @@ package datafile
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -15,7 +16,7 @@ func GetFloats(fileName string) ([]float64, error) {
 		log.Fatal(err)
 	}
 	scanner := bufio.NewScanner(file)
-
+	fmt.Println("12345")
 	for scanner.Scan() {
 		number, err := strconv.ParseFloat(scanner.Text(), 64)
 		if err != nil {
